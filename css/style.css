@@ -1,0 +1,262 @@
+/* Los comentarios los debemos hacer con */
+/* 
+Existen tres maneras de aplicar un estilo
+1. En la línea <div style="..">
+2. En el <head> de la página html
+3. En un archivo externo........(De tu proyecto o de otra fuente)
+**Estructura**
+p-> etiqueta (selector)
+{
+propieda:valor;
+propieda:valor;
+propieda:valor;
+propieda:valor;
+}
+Tipos de selectores
+1. p, h1, div,...
+2. # los id
+3. .clases (vamos a trabjar a partir de ahora)
+
+
+Iconos de Google -> Tamaños recomendados -> 18px | 24px | 36px | 48px
+*/
+
+
+/* Primera regla que se pone */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.contenedor {
+    width: 100;
+    background-color: palevioletred;
+    font-size: 48px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.contenedor .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 48;
+    font-size: 48px;
+}
+
+.letraGrande {
+    font-size: 48px;
+}
+
+.letraNegro {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
+
+/* Se puede especificar que una clase se aplique a elementos específicos de html */
+
+.centrado {
+    text-align: center;
+    /*centrado tipo línea*/
+    margin: auto;
+    /*centrado tipo bloque*/
+}
+
+.justificado {
+    text-align: justify;
+}
+
+.izquierda {
+    text-align: left;
+}
+
+.derecha {
+    text-align: right;
+}
+
+/* h1{
+    font-size: 48px;}
+
+p{
+    font-size: 48px;}
+
+li{
+    font-size: 48px;}
+
+ ->>> Existe la agrupación de reglas, con el objetivo de minimizar el código <<<-
+
+h1,p,li{
+    font-size: 48px;} */
+
+/* Los estilos aplicados en línea, tienen prioridad a los internos y externos */
+
+/* Existen los estilos de Agente (Estilos de Navegadr) */
+
+/* Colores */
+/* fuentes:color*/
+/* fondo:background-color */
+/* Bordes: se le pueden aplicar a todas las etiquetas html, p, div, img... */
+/* border: width style color
+   
+   border-width: 3px;
+   border-style: dotted; ->solid, dotted, dashed, double, groove, ridge
+   border-color: blue;
+
+   border: 3px dotted blue; */
+.divBordes {
+    border-left: 6px solid palevioletred;
+    max-width: 40%;
+    padding: 25px 30px 10px 40px;
+    outline: 2px dotted palevioletred;
+    /*contorno: dibuja una linea fuera del borde*/
+}
+
+.divBordes p {
+    padding: 25px 0;
+}
+
+.boton {
+    padding: 10px 25px;
+    background-color: palevioletred;
+    border: 1px solid palevioletred;
+    /* Los bordes redondeados */
+    border-radius: 0 15px 0 15px;
+}
+
+.divRedondo {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    /*Para usar flexbox*/
+    justify-content: center;
+    /*Para centrar horizontalmente*/
+    align-items: center;
+    /*Para centrar verticalmente*/
+    
+
+}
+
+.divRedondo a {
+    text-decoration: none;
+    line-height: 10px;
+    color: palevioletred;
+    font-size: 10px;
+}
+
+.inputT {
+    border: none;
+    border-bottom: 2px solid palevioletred;
+}
+
+.espacioTB {
+    padding: 25px 0;
+}
+
+/* Fondos -> background (color - image) */
+/* propiedades
+    repeat ---- si el fondo es pequeño, se repite en todo su contenedor.. */
+
+.imagenR {
+    width: 20%;
+    height: 300px;
+    background-image: url(../img/minifrolic_comida_perro-removebg-preview.png);
+    background-repeat: repeat;
+    background-size: 5%;
+    background-color: rgb(216, 112, 147);
+    display: flex;
+    /*Para usar flexbox*/
+    justify-content: center;
+    /*Para centrar horizontalmente*/
+    align-items: center;
+    /*Para centrar verticalmente*/
+
+    /* propiedad attachment: especifica si la imagen se queda fija o se desplaza (scroll) */
+
+    background-attachment: fixed;
+    /*No se mueve*/
+    background-position: right top;
+}
+
+.titulo {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+body {
+    /* background-image: url(../img/minifrolic_comida_perro-removebg-preview.png); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+    background-size: 5%;
+    
+    /*background: color imagen repeat attachmnet posicion
+    -> En ese orden <-*/
+    
+    /*background: url(../img/minifrolic_comida_perro-removebg-preview.png) no-repeat fixed right bottom;  ----> Es lo mismo que hemos hecho pero reducido*/
+}
+
+/* Márgenes en CSS */
+
+.divMP p{
+    margin: 25px;
+    padding: 25px;
+}
+
+.divMP, .divMP p {
+    border: 1px solid palevioletred;
+}
+
+.margen-{
+    margin-top: -150px;
+}
+
+.margen- img{
+    opacity: 0.5;
+}
+
+/* Tanto en margin como en padding, pueden existir tres valores ---> ej:padding: 25px 50px 70px
+25px - relleno superior
+50px - izquierdo y derecho
+70px - relleno inferior
+*/
+
+/****WIDTH Y HEIGTH*****/
+/* ancho y alto de los elemento */
+/* Tomar en cuenta: si establecemos un width que el navegador que no puede mostrar, tenemos que establecer un ancho máximo */
+
+.imagenMX{
+    max-width: 50%;
+}
+
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+[class*=col-]{ /*todas las clases que comienzan con col- se le aplica esa regla*/
+    display: flex;
+}
+
+.imgH{ /*para que se vea solo cuando pasas por encima de ello*/
+    opacity: 0.85;
+}
+.imgH:hover{
+    opacity: 1; /*entre 0 hasta 1*/
+    width: 33.33%;
+}
+
